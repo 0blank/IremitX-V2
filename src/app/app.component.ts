@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SidenavService } from './core/service/sidenav.service';
+import { TableService } from './shared/service/table/table.service';
 
 @Component({
   selector: 'app-root',
@@ -7,26 +8,11 @@ import { SidenavService } from './core/service/sidenav.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  users = [
-    {
-      id: 1,
-      name: "Suman"
-    },
-    {
-      id: 2,
-      name: "Mahtashi"
-    },
-    {
-      id: 3,
-      name: "Gauchan"
-    },
-    {
-      id: 4,
-      name: "Thakali"
-    }
-  ]
+  users = {};
 
-  constructor(public sideBarService: SidenavService) { }
+  constructor(public sideBarService: SidenavService, private tableService: TableService) {
+    this.tableService.getTableList(1).subscribe(res => this.users = res)
+  }
 
 
 }

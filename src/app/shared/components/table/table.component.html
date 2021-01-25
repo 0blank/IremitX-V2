@@ -39,7 +39,7 @@
         </clr-dg-column>
     </ng-container>
 
-    <clr-dg-row *clrDgItems="let item of data" [clrDgItem]="item">
+    <clr-dg-row *clrDgItems="let item of items" [clrDgItem]="item">
         <!-- <clr-dg-row [clrDgSelectable]="!item.locked" *clrDgItems="let item of data;let index = index" [clrDgItem]="item"> -->
         <!-- [(clrDgSelected)]="item.selected"> -->
         <ng-container *ngFor="let column of columns">

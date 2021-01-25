@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
   currentPageSize = 10;
-  columns: Array<string> = [];
+  // columns: Array<string> = [];
   selected: Array<any> = [];
   loading: boolean = false;
 
@@ -15,8 +15,14 @@ export class TableComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.columns = Object.keys(this.data[0]);
+  ngOnInit(): void { }
+
+  public get columns() {
+    return this.data.column;
+  }
+
+  public get items() {
+    return this.data.data;
   }
 
   onExportAll() {
