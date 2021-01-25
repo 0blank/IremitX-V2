@@ -1,8 +1,10 @@
 {
-    "posts": [
-      { "id": 1, "title": "Post 1" },
-      { "id": 2, "title": "Post 2" },
-      { "id": 3, "title": "Post 3" }
+    "table": [
+      { "id": 1, "name": "Suman", "address": "Sundhara", "gender": "Male" },
+      { "id": 1, "name": "Akriteey", "address": "Biratnagar", "gender": "Female" },
+      { "id": 1, "name": "Honk", "address": "Kongo", "gender": "Male" },
+      { "id": 1, "name": "Kumari", "address": "Latina", "gender": "Female" },
+      { "id": 1, "name": "Peter", "address": "New York", "gender": "Male" }
     ],
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 },
