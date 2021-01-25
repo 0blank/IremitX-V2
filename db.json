@@ -1,5 +1,5 @@
 {
-    "table": {
+    "table?page=1": {
         "column": ["Sno.","Name","Address","Gender"],
         "data": [
             { "id": 1, "name": "Suman", "address": "Sundhara", "gender": "Male" },
@@ -17,8 +17,32 @@
             { "id": 1, "name": "Honk", "address": "Kongo", "gender": "Male" },
             { "id": 1, "name": "Kumari", "address": "Latina", "gender": "Female" },
             { "id": 1, "name": "Peter", "address": "New York", "gender": "Male" }
-          ]
+          ],
+          "totalPages": 2,
+          "currentPage": 1
     },
+    "table?page=2": {
+      "column": ["Sno.","Name","Address","Gender"],
+      "data": [
+          { "id": 1, "name": "Gauchan", "address": "Bhotebahal", "gender": "Male" },
+          { "id": 1, "name": "Pandey", "address": "Golkot", "gender": "Female" },
+          { "id": 1, "name": "Honkey", "address": "Kongo", "gender": "Male" },
+          { "id": 1, "name": "Kumari", "address": "Latina", "gender": "Female" },
+          { "id": 1, "name": "Peter", "address": "New York", "gender": "Male" },
+          { "id": 1, "name": "Suman", "address": "Sundhara", "gender": "Male" },
+          { "id": 1, "name": "Akriteey", "address": "Biratnagar", "gender": "Female" },
+          { "id": 1, "name": "Honk", "address": "Kongo", "gender": "Male" },
+          { "id": 1, "name": "Kumari", "address": "Latina", "gender": "Female" },
+          { "id": 1, "name": "Peter", "address": "New York", "gender": "Male" },
+          { "id": 1, "name": "Suman", "address": "Sundhara", "gender": "Male" },
+          { "id": 1, "name": "Akriteey", "address": "Biratnagar", "gender": "Female" },
+          { "id": 1, "name": "Honk", "address": "Kongo", "gender": "Male" },
+          { "id": 1, "name": "Kumari", "address": "Latina", "gender": "Female" },
+          { "id": 1, "name": "Peter", "address": "New York", "gender": "Male" }
+        ],
+      "totalPages": 2,
+      "currentPage": 2
+  },
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 },
       { "id": 2, "body": "some comment", "postId": 1 }
