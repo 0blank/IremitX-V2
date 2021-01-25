@@ -1,5 +1,5 @@
 {
-    "table?page=1": {
+    "table/page/1": {
         "column": ["Sno.","Name","Address","Gender"],
         "data": [
             { "id": 1, "name": "Suman", "address": "Sundhara", "gender": "Male" },
@@ -21,7 +21,7 @@
           "totalPages": 2,
           "currentPage": 1
     },
-    "table?page=2": {
+    "table/page/2": {
       "column": ["Sno.","Name","Address","Gender"],
       "data": [
           { "id": 1, "name": "Gauchan", "address": "Bhotebahal", "gender": "Male" },
