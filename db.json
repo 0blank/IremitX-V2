@@ -1,8 +1,7 @@
 {
-    "table": {
-        "page":{
-          "1": {
-            "column": ["Sno.","Name","Address","Gender"],
+    "table": [{
+      "id":1,
+        "column": ["Sno.","Name","Address","Gender"],
         "data": [
             { "id": 1, "name": "Suman", "address": "Sundhara", "gender": "Male" },
             { "id": 1, "name": "Akriteey", "address": "Biratnagar", "gender": "Female" },
@@ -22,9 +21,10 @@
           ],
           "totalPages": 2,
           "currentPage": 1
-          },
-          "2": {
-            "column": ["Sno.","Name","Address","Gender"],
+    },
+    {
+      "id": 2,
+      "column": ["Sno.","Name","Address","Gender"],
       "data": [
           { "id": 1, "name": "Gauchan", "address": "Bhotebahal", "gender": "Male" },
           { "id": 1, "name": "Pandey", "address": "Golkot", "gender": "Female" },
@@ -44,9 +44,8 @@
         ],
       "totalPages": 2,
       "currentPage": 2
-          }
-        }
-    },
+  }
+  ],
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 },
       { "id": 2, "body": "some comment", "postId": 1 }
