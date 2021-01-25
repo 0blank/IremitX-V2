@@ -1,0 +1,26 @@
+<!-- <nav class="subnav">
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item tab-item" *ngFor="let tabItem of tabItems">
+      <a [routerLink]="[tabItem.link]" class="nav-link" data-toggle="pill">{{tabItem.name}}</a>
+      <span class="tab-item-icon" *ngIf="tabItem.name === 'Home' ? false : true" (click)="removeFromTabItems(tabItem)">
+        <clr-icon shape="window-close"></clr-icon>
+      </span>
+    </li>
+  </ul>
+</nav> -->
+<!-- <button style="position: fixed;bottom: 10px;right:10px"> Chat Head</button> -->
+<button type="button" class="btn btn-icon btn-primary" [ngClass]="isFloatingOpen ? 'btn-float' : ''"
+  (click)="toggleFloatingOpen()"
+  style="position: fixed;bottom: 10px;height: 50px;right:20px; width: 50px;border-radius: 50%;" aria-label="settings">
+  <clr-icon shape="cog"></clr-icon>
+</button>
+<div class="floating-menu" [ngClass]="isFloatingOpen ? 'active' : ''">
+  <ul class="nav-list">
+    <li class="nav-item tab-item" *ngFor="let tabItem of tabItems | reverse">
+      <a [routerLink]="[tabItem.link]" class="nav-link" data-toggle="pill">{{tabItem.name}}</a>
+      <span class="tab-item-icon" *ngIf="tabItem.name === 'Home' ? false : true" (click)="removeFromTabItems(tabItem)">
+        <clr-icon shape="window-close"></clr-icon>
+      </span>
+    </li>
+  </ul>
+</div>

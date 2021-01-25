@@ -1,0 +1,27 @@
+<!-- <nav [@sliderState]="sideBarService.sidebarState" class="sidenav i-bg-primary"> -->
+<nav class="sidenav" [ngClass]="sideBarService.sidebarState === 'active' ? 'active' : 'inactive'">
+    <section class="sidenav-content">
+        <section class="nav-group">
+            <ul class="nav-list">
+                <li *ngFor="let menuItem of menuItems; let index = index" class="i-relative"
+                    (mouseover)="changeStyle($event,index)" (mouseout)="changeStyle($event,index)">
+                    <a [routerLink]="[menuItem.link]" class="nav-link py-nav-link" (click)="addToMenuList(menuItem)">
+                        <div>
+                            <clr-icon [attr.shape]="menuItem.icon"></clr-icon>
+                        </div>
+                        <div class="nav-link-title">{{menuItem.name}}</div>
+                    </a>
+                    <div *ngIf="menuItem.sub" class="nav-submenu"
+                        [ngClass]="subMenuClass === 'active' && activeIndex === index ? 'active' : ''">
+                        <ul class="nav-list">
+                            <li *ngFor="let subItem of menuItem.sub">
+                                <a [routerLink]="[subItem.link]" class="nav-link py-nav-link"
+                                    (click)="addToMenuList(subItem)">{{subItem.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+</nav>

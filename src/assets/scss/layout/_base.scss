@@ -1,0 +1,15 @@
+.main-content{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.main-content.active{
+    margin-left: 250px;
+    transition: all 0.2s ease-in;
+}
+
+.main-content.inactive{
+    margin-left: 50px;
+    transition: all 0.2s ease-in;
+}

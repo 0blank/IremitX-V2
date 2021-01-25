@@ -1,0 +1,58 @@
+<clr-datagrid style="z-index:0;" [clrDgLoading]="loading" [(clrDgSelected)]="selected">
+    <!-- ... -->
+    <clr-dg-action-bar *ngIf="selected.length">
+        <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-secondary" (click)="onAdd()">
+                <clr-icon shape="plus"></clr-icon> Add to group
+            </button>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="onDelete()">
+                <clr-icon shape="close"></clr-icon> Delete
+            </button>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="onEdit()" *ngIf="selected.length === 1">
+                <clr-icon shape="pencil"></clr-icon> Edit
+            </button>
+        </div>
+        <div class="btn-group">
+            <clr-dropdown>
+                <button type="button" class="btn btn-sm btn-secondary" clrDropdownTrigger>
+                    Export
+                    <clr-icon shape="caret down"></clr-icon>
+                </button>
+                <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                    <button type="button" (click)="onExportAll()" clrDropdownItem>Export All</button>
+                    <!-- <button type="button" (click)="onExportSelected()" [disabled]="selected.length === 0" -->
+                    <button type="button" (click)="onExportSelected()" clrDropdownItem>
+                        Export Selected Items
+                    </button>
+                </clr-dropdown-menu>
+            </clr-dropdown>
+        </div>
+    </clr-dg-action-bar>
+
+    <!-- ... -->
+    <clr-dg-placeholder>We couldn't find any data !</clr-dg-placeholder>
+    <ng-container *ngFor="let column of columns">
+        <clr-dg-column [clrDgField]="column">
+            <ng-container *clrDgHideableColumn="{hidden: false}">
+                {{column}}
+            </ng-container>
+        </clr-dg-column>
+    </ng-container>
+
+    <clr-dg-row *clrDgItems="let item of data" [clrDgItem]="item">
+        <!-- <clr-dg-row [clrDgSelectable]="!item.locked" *clrDgItems="let item of data;let index = index" [clrDgItem]="item"> -->
+        <!-- [(clrDgSelected)]="item.selected"> -->
+        <ng-container *ngFor="let column of columns">
+            <clr-dg-cell>{{item[column]}}</clr-dg-cell>
+        </ng-container>
+    </clr-dg-row>
+
+    <clr-dg-detail *clrIfDetail="let detail">
+        <clr-dg-detail-header>{{detail.name}}</clr-dg-detail-header>
+    </clr-dg-detail>
+    <!-- ... -->
+    <clr-dg-footer>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{pagination.totalItems}} data
+        <clr-dg-pagination #pagination [clrDgPageSize]="currentPageSize"></clr-dg-pagination>
+    </clr-dg-footer>
+</clr-datagrid>

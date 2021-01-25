@@ -1,0 +1,77 @@
+.sidenav{
+    background-color: $sidebar;
+    box-shadow: 5px 5px 47px -17px rgba(0,0,0,0.8);
+    border: none;
+    height: 100%;
+    position: fixed;
+    overflow: visible !important;
+    z-index: 1;
+    .nav-submenu{
+        display: none;
+        position: absolute;
+        top:0;
+        min-width: 150px;
+        max-width: 250px;
+        max-height: 400px;
+        background-color: $sidebar-submenu;
+        color: $text-sidebar-submenu;
+    }
+    .nav-submenu.active{
+        display: block;
+    }
+    .sidenav-content{
+        overflow-x: visible !important;
+    }
+    .nav-list{
+        padding: 0 !important;
+        margin: 0 !important;
+        color: $text-sidebar;
+    }
+    .nav-link-title{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.sidenav.inactive{
+    width: 50px !important;
+    min-width: 50px;
+    transition: all 0.2s ease-in;
+    .nav-submenu{
+        left: 50px;
+        transition: all 0.2s ease-in;
+    }
+    .nav-list{
+        padding: 10px 0;
+    }
+    .nav-link-title{
+        display: none;
+    }
+}
+
+.sidenav.active{
+            width: 250px !important;
+            transition: all 0.2s ease-in;
+            .nav-submenu{
+                left: 250px;
+                transition: all 0.2s ease-in;
+            }
+            .py-nav-link{
+                        padding: 10px 20px !important;
+                    }
+                    .nav-link-title{
+                        margin-left: 20px;
+                        display: inline-block !important;
+                    }
+        }
+
+.py-nav-link{
+    display: flex !important;
+    padding: 10px 16px !important;
+    &:hover {
+        background-color: $sidebar-hover !important;
+    }
+    .nav-link-title:hover{
+        color: $text-sidebar-hover !important;
+    }
+}
