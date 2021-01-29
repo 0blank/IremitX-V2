@@ -1,7 +1,11 @@
 {
     "table": [{
       "id":1,
-        "column": {"name":"Name","address":"Address","gender":"Gender"},
+      "column": [
+            { field: 'name', header: 'Name' },
+            { field: 'address', header: 'Address' },
+            { field: 'gender', header: 'Gender' }
+        ];
         "data": [
             { "id": 1, "name": "Suman", "address": "Sundhara", "gender": "Male" },
             { "id": 1, "name": "Akriteey", "address": "Biratnagar", "gender": "Female" },
